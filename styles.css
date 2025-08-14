@@ -1,3 +1,40 @@
+/* === VURGULU ÇERÇEVE + SİYAH BARLAR === */
+
+/* Dış çerçeve: sayfanın etrafında kalın siyah kenarlık */
+html { background: #000; }
+body {
+  margin: 14px;                 /* kenarlık ile ekran arasında boşluk */
+  border: 6px solid #000;       /* siyah çerçeve */
+  border-radius: 16px;          /* köşeler yumuşasın */
+  background: var(--bg);        /* iç arka plan */
+}
+
+/* Üst ve alt barlar belirgin siyah */
+.frame { background: #000; color: var(--text); }
+.topbar { 
+  border-bottom: 1px solid var(--border);
+  position: sticky; top: 0; z-index: 50;
+  box-shadow: 0 6px 14px rgba(0,0,0,.35);
+}
+.footerbar {
+  border-top: 1px solid var(--border);
+  box-shadow: 0 -4px 12px rgba(0,0,0,.35) inset;
+}
+
+/* İçerik genişliği ve boşluklar */
+.container { max-width: 1100px; margin: 0 auto; padding: 22px 26px; }
+
+/* Navigasyon daha tok görünsün */
+.nav { display:flex; gap:18px; align-items:center; justify-content:space-between; padding: 12px 0; }
+.brand { font-weight: 800; letter-spacing: .3px; }
+.navlinks a { color: var(--text); opacity: .92; margin: 0 8px; padding-bottom: 3px; }
+.navlinks a.active { opacity: 1; border-bottom: 2px solid var(--accent); }
+
+/* Buton ve kart görselliği korunsun */
+.btn { background: linear-gradient(90deg, var(--accent), #22d3ee); color:#08121f; padding:10px 14px; border-radius:12px; font-weight:700; }
+
+/* (İsteğe bağlı) sayfa içi kartların kenarlıkları biraz daha belirgin olsun */
+.card { border: 1px solid rgba(255,255,255,.10); background: #111826; }
 
 :root{
   --bg:#0b0f15;
